@@ -1,0 +1,111 @@
+<!doctype html>
+<html class="no-js" lang="en" ng-app="betApp">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Login Services</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo/favicon.ico">
+
+    <!-- all css here -->
+
+    <!-- bootstrap v3.3.6 css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- font-icon css -->
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- modernizr css -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example" ng-controller="LoginController">
+
+    <!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+
+    <!-- Start Slider Area -->
+    <div class="login-area area-padding fix">
+        <div class="login-overlay"></div>
+        <div class="table">
+            <div class="table-cell">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-12">
+                            <div class="login-form">
+                                <h4 class="login-title text-center">LOGIN</h4>
+                                <div class="row">
+                                    <form id="contactForm" method="POST" action="http://rockstheme.com/rocks/bultifore-preview/contact.php" class="log-form">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <input type="text" id="name" class="form-control" placeholder="Username" required ng-model="user.username">
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <input type="password" id="msg_subject" class="form-control" placeholder="Password" required ng-model="user.password">
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                                            <div class="check-group flexbox">
+                                                <label class="check-box">
+                                                    <input type="checkbox" class="check-box-input" checked>
+                                                    <span class="remember-text">Remember me</span>
+                                                </label>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 text-center" style="margin-bottom:100px">
+                                            <button type="button" id="submit" class="slide-btn login-btn" ng-click="login()">Login</button>
+                                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Slider Area -->
+
+    <!-- all js here -->
+
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Form validator js -->
+    <script src="js/form-validator.min.js"></script>
+    <!-- plugins js -->
+    <script src="js/plugins.js"></script>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-auth.js"></script>
+
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/moment.min.js"></script>
+    <script src="./lib/angular-moment.min.js"></script>
+    <script src="./js2/app.js"></script>
+</body>
+
+
+</html>
