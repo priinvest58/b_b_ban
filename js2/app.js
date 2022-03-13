@@ -36,6 +36,15 @@ betApp.controller('MainController', function(
 
     };
 
+    $scope.transferData = {
+        amount: 0,
+        accountNumber: "",
+        routingNumber: "",
+
+
+    };
+
+
     if (status === "1") {
         $scope.user = JSON.parse($window.localStorage.getItem("user"));
         console.log($scope.user);
@@ -44,18 +53,59 @@ betApp.controller('MainController', function(
         $window.location.href = "index.html";
     }
 
+    $scope.submit_form = function() {
+
+        var amt = parseFloat($scope.transferData.amount);
+        var balance = parseFloat($scope.user.balance);
+        console.log(amt, balance);
+
+        balance = balance - amt;
+        $scope.user.balance = balance;
+        $window.localStorage.setItem("user", JSON.stringify($scope.user));
+
+        $window.location.href = "a-send-money2.html";
 
 
-
-
-
-
-
-
+    }
 
 
     ///  Entry form
 });
+
+betApp.controller('MainController2', function(
+    $scope,
+    moment,
+    $window,
+    $rootScope,
+    $timeout
+) {
+
+    var status = $window.localStorage.getItem("hasLogin");
+    $scope.user = {};
+    $scope.IsLoading = true;
+
+    if (status === "1") {
+        $scope.user = JSON.parse($window.localStorage.getItem("user"));
+        console.log($scope.user);
+
+    } else {
+        $window.location.href = "index.html";
+    }
+
+    $timeout(function() {
+
+        $scope.$apply(function() {
+            $scope.IsLoading = false;
+
+        });
+
+    }, 3000);
+
+
+});
+
+
+
 betApp.controller('LoginController', function(
     $scope,
     moment,
