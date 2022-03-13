@@ -40,7 +40,7 @@
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body ng-controller="MainController">
+<body ng-controller="MainController2">
 
     <!--[if lt IE 8]>
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -81,6 +81,28 @@
                 </div>
             </div>
             <div class="row">
+
+                <div class="col-md-9 col-sm-9 col-xs-12">
+                    <div class="dashboard-content">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12" style="text-align: center; margin-top: 20px; margin-bottom: 30px;">
+
+                                <div ng-show="IsLoading">
+                                    <img src="ld2.gif" alt="" style="height:100px;">
+                                    <h4>Processing please wait...</h4>
+                                </div>
+
+                                <div ng-show="!IsLoading">
+                                    <h4>Enter Access Code</h4>
+                                    <input type="text" class="form-control">
+                                    <button class="btn btn-danger btn-block" style="margin-top:10px;">Submit</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-md-3 col-sm-3 col-xs-12">
                     <aside class="sidebar">
                         <div class="dashboard-side">
@@ -95,42 +117,6 @@
                         </div>
 
                     </aside>
-                </div>
-                <div class="col-md-9 col-sm-9 col-xs-12">
-                    <div class="dashboard-content">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="send-money-form">
-                                    <div class="form-text">
-                                        <h4 class="form-top">Send Money</h4>
-                                        <div class="form-inner">
-                                            <form action="#">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <label for="m-send">Amount</label>
-                                                        <input type="number" value="0" id="m-send" ng-model="transferData.amount" placeholder="Amount">
-                                                    </div>
-                                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                                        <input type="text" placeholder="Account Number" ng-model="transferData.accountNumber">
-                                                    </div>
-                                                    <div class="col-md-8 col-sm-8 col-xs-12">
-                                                        <input type="text" placeholder="Routing Number" ng-model="transferData.routingNumber">
-                                                    </div>
-                                                    <div class="col-md-4 col-sm-4 col-xs-12">
-                                                        <button type="button" ng-click="submit_form()">Submit</button>
-                                                    </div>
-                                                    <div class="col-md-12 col-sm-12 col-xs-12">
-                                                        <label for="textmsde">Recipient Copy</label>
-                                                        <textarea name="textarea" rows="4" id="textmsde"></textarea>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -200,5 +186,7 @@
     <script src="./lib/angular-moment.min.js"></script>
     <script src="./js2/app.js"></script>
 </body>
+
+</html>
 
 </html>
